@@ -13,7 +13,7 @@ def load_data():
     df['Year'] = df['Date'].dt.year
     df['Month'] = df['Date'].dt.month
     df['Week'] = df['Date'].dt.isocalendar().week
-    df.fillna(method='ffill', inplace=True)
+    df.fillna(inplace=True)
     return df
 
 df = load_data()
